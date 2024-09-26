@@ -10,11 +10,12 @@
 
 
     <TextView
+        android:id="@+id/tvAnswer"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
         android:padding="20dp"
-        android:text="Hello World!"
+        android:hint="Výsledek"
         android:textSize="20sp" />
 
     <LinearLayout
