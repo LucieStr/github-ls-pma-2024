@@ -79,5 +79,62 @@ class MainActivity : AppCompatActivity() {
         btnOne.setOnClickListener{
             tvAnswer.text = "One"
         }
+        btnTwo.setOnClickListener{
+            tvAnswer.text = "Two"
+        }
+        btnThree.setOnClickListener{
+            tvAnswer.text = "Three"
+        }
+        btnFour.setOnClickListener{
+            tvAnswer.text = "Four"
+        }
+        btnFive.setOnClickListener{
+            tvAnswer.text = "Five"
+        }
+        btnSix.setOnClickListener{
+            tvAnswer.text = "Six"
+        }
+        btnSeven.setOnClickListener{
+            tvAnswer.text = "Seven"
+        }
+        btnEight.setOnClickListener{
+            tvAnswer.text = "Eight"
+        }
+        btnNine.setOnClickListener{
+            tvAnswer.text = "Nine"
+        }
+        btnTen.setOnClickListener{
+            tvAnswer.text = "Ten"
+        }
+        btnTwenty.setOnClickListener{
+            tvAnswer.text = "Twenty"
+        }
+        btnThirty.setOnClickListener{
+            tvAnswer.text = "Thirty"
+        }
+        btnFourty.setOnClickListener{
+            tvAnswer.text = "Fourty"
+        }
+        btnFifty.setOnClickListener{
+            tvAnswer.text = "Fifty"
+        }
+        btnSixty.setOnClickListener{
+            tvAnswer.text = "Sixty"
+        }
+        btnSeventy.setOnClickListener{
+            tvAnswer.text = "Seventy"
+        }
+        btnEighty.setOnClickListener{
+            tvAnswer.text = "Eighty"
+        }
+        btnNinety.setOnClickListener{
+            tvAnswer.text = "Ninety"
+        }
+        btnHundred.setOnClickListener{
+            tvAnswer.text = "Hundred"
+        }
+        btnThousand.setOnClickListener{
+            tvAnswer.text = "Thousand"
+        }
     }
 }
