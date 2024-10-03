@@ -1,19 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20sp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/rNadpis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Jaký typ prstenu si chcete objednat?"
+        android:textAlignment="center"/>
+    <RadioGroup
+        android:id="@+id/rPrsten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rPrstenZl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zlato"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rPrstenRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rose Gold"/>
+        <RadioButton
+            android:id="@+id/rPrstenSt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stříbro" />
+    </RadioGroup>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <CheckBox
+        android:id="@+id/chVelikost44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="velikost 44"/>
+    <CheckBox
+        android:id="@+id/chVelikost50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="velikost 50"/>
+    <CheckBox
+        android:id="@+id/chVelikost55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="velikost 55"/>
+    <Button
+        android:id="@+id/btnObjednavka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Objednat prsten"/>
+    <TextView
+        android:id="@+id/tvObjednavka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Souhrn objednávky:"/>
+
+    <ImageView
+        android:id="@+id/ivPrsten"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:src="@drawable/zlato"
+        android:scaleType="centerInside"/>
+
+</LinearLayout>
