@@ -16,6 +16,7 @@
         android:text="Jaký typ prstenu si chcete objednat?"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textColor="@color/black"
         />
     <RadioGroup
         android:id="@+id/rPrsten"
@@ -26,46 +27,62 @@
             android:id="@+id/rPrstenZl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zlato"
-            android:checked="true"/>
+            android:text="Zlatý"
+            android:checked="true"
+            android:buttonTint="@color/pink"
+            android:textSize="16sp"/>
         <RadioButton
             android:id="@+id/rPrstenRG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rose Gold"/>
+            android:text="Rose Gold"
+            android:buttonTint="@color/pink"
+            android:textSize="16sp"/>
         <RadioButton
             android:id="@+id/rPrstenSt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stříbro" />
+            android:text="Stříbrný"
+            android:buttonTint="@color/pink"
+            android:textSize="16sp"/>
     </RadioGroup>
 
     <CheckBox
         android:id="@+id/chKrouzky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Méně kroužků"/>
+        android:text="Méně kroužků"
+        android:buttonTint="@color/pink"
+/>
     <CheckBox
         android:id="@+id/chBarvaK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zelené kameny"/>
+        android:text="Zelené kameny"
+        android:buttonTint="@color/pink"
+        android:textSize="16sp"/>
     <CheckBox
         android:id="@+id/chJedenK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jeden kámen"/>
+        android:text="Jeden kámen"
+        android:buttonTint="@color/pink"
+        android:textSize="16sp"/>
     <Button
         android:id="@+id/btnObjednavka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Objednat prsten"
-        android:backgroundTint="@color/pink"/>
+        android:backgroundTint="@color/pink"
+        android:textSize="16sp"
+        />
     <TextView
         android:id="@+id/tvObjednavka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Souhrn objednávky:"/>
+        android:text="Souhrn objednávky: "
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
 
     <ImageView
         android:id="@+id/ivPrsten"
