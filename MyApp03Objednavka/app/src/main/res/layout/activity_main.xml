@@ -39,20 +39,20 @@
     </RadioGroup>
 
     <CheckBox
-        android:id="@+id/chVelikost44"
+        android:id="@+id/chKrouzky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="velikost 44"/>
+        android:text="Méně kroužků"/>
     <CheckBox
-        android:id="@+id/chVelikost50"
+        android:id="@+id/chBarvaK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="velikost 50"/>
+        android:text="Zelené kameny"/>
     <CheckBox
-        android:id="@+id/chVelikost55"
+        android:id="@+id/chJedenK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="velikost 55"/>
+        android:text="Jeden kámen"/>
     <Button
         android:id="@+id/btnObjednavka"
         android:layout_width="wrap_content"
