@@ -42,5 +42,15 @@ class MainActivity : AppCompatActivity() {
             binding.tvObjednavka.text = objednavkaText
         }
 
+        //zmena obrazku v zavislosti na vyberu
+        binding.rPrstenZl.setOnClickListener{
+            binding.ivPrsten.setImageResource(R.drawable.zlato)
+        }
+        binding.rPrstenRG.setOnClickListener{
+            binding.ivPrsten.setImageResource(R.drawable.rosegold)
+        }
+        binding.rPrstenSt.setOnClickListener{
+            binding.ivPrsten.setImageResource(R.drawable.stribro)
+        }
     }
 }
