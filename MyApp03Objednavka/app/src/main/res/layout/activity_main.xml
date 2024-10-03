@@ -14,7 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jaký typ prstenu si chcete objednat?"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textSize="20sp"
+        />
     <RadioGroup
         android:id="@+id/rPrsten"
         android:layout_width="wrap_content"
@@ -57,7 +59,8 @@
         android:id="@+id/btnObjednavka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Objednat prsten"/>
+        android:text="Objednat prsten"
+        android:backgroundTint="@color/pink"/>
     <TextView
         android:id="@+id/tvObjednavka"
         android:layout_width="wrap_content"

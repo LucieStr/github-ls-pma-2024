@@ -33,6 +33,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    //modification for using viewBinding, nezapomen sync project with gradle (slon nahore)
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
