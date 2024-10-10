@@ -12,36 +12,31 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapp05moreactivities.ui.theme.MyApp05MoreActivitiesTheme
+import android.content.Intent
+import android.widget.Button
+import android.widget.EditText
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            MyApp05MoreActivitiesTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+       // enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+
+
+        val btnSecond = findViewById<Button>(R.id.btnSecond)
+        val etNickname = findViewById<EditText>(R.id.etNickname)
+
+
+        btnSecond.setOnClickListener {
+            val nickname = etNickname.text.toString() // získáme text z edit text pole
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("NICK_NAME", nickname)
+            startActivity(intent)
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApp05MoreActivitiesTheme {
-        Greeting("Android")
     }
+
 }
