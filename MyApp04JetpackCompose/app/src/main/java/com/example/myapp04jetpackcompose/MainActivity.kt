@@ -4,10 +4,16 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.OffsetMapping
+import androidx.compose.ui.text.input.TransformedText
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 class MainActivity : ComponentActivity() {
@@ -33,6 +39,7 @@ fun ComposePerson() {
     var place by remember { mutableStateOf("") }
     var resultText by remember { mutableStateOf("") }
     var titul by remember { mutableStateOf("") }
+    var phoneNumber by remember { mutableStateOf("") }
 
     // Přidáme Scaffold, abychom mohli přidat TopAppBar
     Scaffold(
@@ -93,6 +100,18 @@ fun ComposePerson() {
                 label = { Text("Bydliště") },
                 modifier = Modifier.fillMaxWidth()
             )
+            OutlinedTextField(
+                value = phoneNumber,
+                onValueChange = {
+                    if (it.length <= 9 && it.all { char -> char.isDigit() }) {
+                        phoneNumber = it
+                    }
+                },
+
+                label = { Text("Telefonní číslo") },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
+                modifier = Modifier.fillMaxWidth()
+            )
 
             // Tlačítka Odeslat a Vymazat
             Row(
@@ -115,6 +134,8 @@ fun ComposePerson() {
                         age = ""
                         place = ""
                         resultText = ""
+                        titul = ""
+                        phoneNumber = ""
                     },
                     modifier = Modifier.weight(1f),
                     colors = ButtonDefaults.buttonColors(
@@ -138,6 +159,7 @@ fun ComposePerson() {
             }
         }
     }
+
 }
 
 @Preview(showBackground = true)
