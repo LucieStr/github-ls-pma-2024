@@ -6,6 +6,8 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+
+
 import androidx.core.view.WindowInsetsCompat
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,10 +15,12 @@ class SecondActivity : AppCompatActivity() {
         //enableEdgeToEdge()
         setContentView(R.layout.activity_second)
 
-        val twInfo = findViewById<TextView>(R.id.twInfo)
+        val tvInfo = findViewById<TextView>(R.id.tvInfo)
+
         // Načtení dat z intentu
         val nickname = intent.getStringExtra("NICK_NAME")
-        twInfo.text = "Data z první aktivity. Jméno: $nickname"
+        tvInfo.text = "Data z první aktivity. Jméno: $nickname"
+
         val btnBack = findViewById<Button>(R.id.btnBack)
         btnBack.setOnClickListener {
             finish()
