@@ -1,6 +1,9 @@
 package com.example.myapp05moreactivities
 
+import android.content.Intent
 import android.os.Bundle
+import android.text.InputFilter
+
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +21,19 @@ class SecondActivity : AppCompatActivity() {
 
         // Načtení dat z intentu
         val nickname = intent.getStringExtra("NICK_NAME")
-        binding.twInfo.text = "Data z první aktivity. Jméno: $nickname"
+        binding.tvInfo.text = "Data z první aktivity. Jméno: $nickname"
+
+
+
+        binding.btnThird.setOnClickListener {
+            val number = binding.etNumber.text.toString() // získáme text z edit text pole
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("NUMBER", number)
+            intent.putExtra("NICK_NAME", nickname)
+            startActivity(intent)
+
+        }
+
 
         binding.btnBack.setOnClickListener {
             finish()

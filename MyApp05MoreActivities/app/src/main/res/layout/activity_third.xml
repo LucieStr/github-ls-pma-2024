@@ -13,19 +13,9 @@
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data z první aktivity: "/>
+        android:text="Výsledek"
+        android:textSize="22sp"/>
 
-    <EditText
-        android:id="@+id/etNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Vyplňte číslo"/>
-
-    <Button
-        android:id="@+id/btnThird"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Třetí aktivita"/>
 
     <Button
         android:id="@+id/btnBack"
