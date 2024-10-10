@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "MyApp04JetpackCompose"
 include(":app")
- 
