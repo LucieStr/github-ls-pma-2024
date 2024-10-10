@@ -4,23 +4,24 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapp05moreactivities.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySecondBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
-        setContentView(R.layout.activity_second)
 
-        val twInfo = findViewById<TextView>(R.id.twInfo)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Načtení dat z intentu
         val nickname = intent.getStringExtra("NICK_NAME")
-        twInfo.text = "Data z první aktivity. Jméno: $nickname"
+        binding.twInfo.text = "Data z první aktivity. Jméno: $nickname"
 
-        val btnBack = findViewById<Button>(R.id.btnBack)
-        btnBack.setOnClickListener {
+        binding.btnBack.setOnClickListener {
             finish()
         }
-
     }
 }
