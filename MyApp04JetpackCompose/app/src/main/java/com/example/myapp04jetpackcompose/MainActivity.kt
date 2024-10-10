@@ -32,16 +32,18 @@ fun ComposePerson() {
     var age by remember { mutableStateOf("") }
     var place by remember { mutableStateOf("") }
     var resultText by remember { mutableStateOf("") }
+    var titul by remember { mutableStateOf("") }
 
     // Přidáme Scaffold, abychom mohli přidat TopAppBar
     Scaffold(
         topBar = {
-            TopAppBar(
+            CenterAlignedTopAppBar(
                 title = { Text("Moje Aplikace", color = Color.White) }, // Nastaví barvu textu na bílou
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.DarkGray,  // Nastaví pozadí na černé
                     //titleContentColor = Color.White // Nastaví barvu textu na bílou
                 )
+
             )
         }
     ) { innerPadding ->
@@ -66,6 +68,13 @@ fun ComposePerson() {
                 label = { Text("Příjmení") },
                 modifier = Modifier.fillMaxWidth()
             )
+
+            OutlinedTextField(
+                value = titul,
+                onValueChange = { titul = it },
+                label = { Text("Titul") },
+                modifier = Modifier.fillMaxWidth()
+            )
             OutlinedTextField(
                 value = age,
                 onValueChange = {
@@ -77,6 +86,7 @@ fun ComposePerson() {
                 label = { Text("Věk (hodnota menší než 151)") },
                 modifier = Modifier.fillMaxWidth()
             )
+
             OutlinedTextField(
                 value = place,
                 onValueChange = { place = it },
