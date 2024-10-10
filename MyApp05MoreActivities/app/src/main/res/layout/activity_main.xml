@@ -9,6 +9,26 @@
     android:orientation="vertical"
     android:padding="16sp">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width= "match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#AEA0D9"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyApp05MoreActivities"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center" />
+
+</androidx.appcompat.widget.Toolbar>
+
+
     <EditText
         android:id="@+id/etNickname"
         android:layout_width="match_parent"

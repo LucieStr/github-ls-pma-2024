@@ -9,18 +9,40 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width= "match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#AEA0D9"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MyApp05MoreActivities"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
         android:id="@+id/tvInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:padding="10sp"
         android:text="Výsledek"
-        android:textSize="22sp"/>
+        android:textAlignment="center"
+        android:textSize="22sp" />
 
 
     <Button
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zavřít aktivitu"/>
+        android:text="Zavřít aktivitu"
+        android:backgroundTint="@color/finish"/>
 
 </LinearLayout>
