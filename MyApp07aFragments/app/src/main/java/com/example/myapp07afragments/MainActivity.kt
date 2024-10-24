@@ -38,11 +38,12 @@ class MainActivity : ComponentActivity() {
     private fun replaceFragment(fragment: Fragment){
         //ziska instanci spravce fragmentu
         val fragmentManager = supportFragmentManager
+
         //vytvori novou transakci s fragmenty
         val fragmentTransaction = fragmentManager.beginTransaction
         //nahradi fragment v kontejneru novym fragmentem ktery byl predan jako tzv. argument
         fragmentTransaction.replace(R.id.fragment_container_view_tag, fragment)
-        //potvrdi vymenu fragmentu
+        //potvrdi transakci a provede vymenu fragmentu
         fragmentTransaction.commit()
     }
 
