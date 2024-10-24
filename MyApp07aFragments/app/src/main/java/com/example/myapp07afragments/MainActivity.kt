@@ -11,37 +11,41 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.fragment.app.Fragment
+import com.example.myapp07afragments.databinding.ActivityMainBinding
 import com.example.myapp07afragments.ui.theme.MyApp07aFragmentsTheme
 
 class MainActivity : ComponentActivity() {
+    lateinit var binding:ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            MyApp07aFragmentsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnFragment1.setOnClickListener{
+            replaceFragment(Fragment1())
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        binding.btnFragment2.setOnClickListener{
+            replaceFragment(Fragment2())
+        }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApp07aFragmentsTheme {
-        Greeting("Android")
     }
+
+    private fun replaceFragment(fragment: Fragment){
+        //ziska instanci spravce fragmentu
+        val fragmentManager = supportFragmentManager
+        //vytvori novou transakci s fragmenty
+        val fragmentTransaction = fragmentManager.beginTransaction
+        //nahradi fragment v kontejneru novym fragmentem ktery byl predan jako tzv. argument
+        fragmentTransaction.replace(R.id.fragment_container_view_tag, fragment)
+        //potvrdi vymenu fragmentu
+        fragmentTransaction.commit()
+    }
+
+
+
 }
