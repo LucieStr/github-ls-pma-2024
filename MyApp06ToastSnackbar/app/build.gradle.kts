@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.utils.alwaysTrue
+
 
 plugins {
     alias(libs.plugins.android.application)
@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapp007toastsnackbar"
+    namespace = "com.example.myapp06toastsnackbar"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.myapp007toastsnackbar"
+        applicationId = "com.example.myapp06toastsnackbar"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
