@@ -15,16 +15,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Dalsi text"
-        android:layout_marginTop="40dp" />
+        android:text="Další text."
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Treti text"
+        android:text="Třetí text."
         android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="20dp"/>
-
-
 
 </FrameLayout>

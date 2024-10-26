@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">MyApp07aFragments</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment1">Zdravim z fragmentu</string>
-    <string name="hello_blank_fragment2">Zdravim z fragmentu</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
