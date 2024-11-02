@@ -1,7 +1,9 @@
 package com.example.myapp07bfragmentsexample1
 
+import android.media.Image
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,20 +14,27 @@ class MainActivity : AppCompatActivity() {
         // Přidáme ListFragment, pokud ještě neexistuje
         if (savedInstanceState == null) {
             val listFragment = ListFragment()
+
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container_list, listFragment)
                 .commit()
+
+
         }
     }
 
+
+
     // Voláno při výběru knihy
-    fun onBookSelected(title: String, author: String) {
+    fun onFlowerSelected(nazev: String, vedNazev: String) {
         // Vytvoření nového DetailFragment a nastavení argumentů
         val detailFragment = DetailFragment()
 
+
         val bundle = Bundle().apply {
-            putString("title", title)
-            putString("author", author)
+            putString("name", nazev)
+            putString("vedName", vedNazev)
+
         }
         detailFragment.arguments = bundle
 
@@ -33,5 +42,9 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container_detail, detailFragment)
             .commit()
+
+
+
     }
+
 }

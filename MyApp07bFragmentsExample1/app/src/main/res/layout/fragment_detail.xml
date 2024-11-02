@@ -7,22 +7,22 @@
     android:padding="20sp">
 
     <TextView
-        android:id="@+id/textViewTitle"
+        android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:text="Title" />
+        android:text="České jméno" />
 
     <TextView
-        android:id="@+id/textViewAuthor"
+        android:id="@+id/textViewVed_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Author" />
+        android:text="Vědecké jméno" />
 
     <TextView
-        android:id="@+id/textViewDescription"
+        android:id="@+id/textViewCeled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Description" />
+        android:text="Brukovité" />
 
 </LinearLayout>

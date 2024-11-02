@@ -1,38 +1,43 @@
 package com.example.myapp07bfragmentsexample1
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 
 class DetailFragment : Fragment() {
 
-    private lateinit var textViewTitle: TextView
-    private lateinit var textViewAuthor: TextView
+    private lateinit var textViewName: TextView
+    private lateinit var textViewVedName: TextView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_detail, container, false)
-        textViewTitle = view.findViewById(R.id.textViewTitle)
-        textViewAuthor = view.findViewById(R.id.textViewAuthor)
+        textViewName = view.findViewById(R.id.textViewName)
+        textViewVedName = view.findViewById(R.id.textViewVed_name)
+
 
         // Načtení argumentů a aktualizace textových polí
         arguments?.let {
-            val title = it.getString("title")
-            val author = it.getString("author")
-            updateDetails(title ?: "Unknown", author ?: "Unknown")
+            val name = it.getString("name")
+            val vedName = it.getString("vedName")
+            updateDetails(name ?: "Unknown", vedName ?: "Unknown")
         }
+
 
         return view
     }
 
     // Metoda pro aktualizaci zobrazení detailů
-    fun updateDetails(title: String, author: String) {
-        textViewTitle.text = title
-        textViewAuthor.text = author
+    fun updateDetails(name: String, vedName: String) {
+        textViewName.text = name
+        textViewVedName.text = vedName
     }
 }
