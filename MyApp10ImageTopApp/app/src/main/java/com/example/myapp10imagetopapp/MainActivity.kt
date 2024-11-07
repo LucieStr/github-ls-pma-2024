@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         )
         val savedImageUri = Uri.parse(savedImageURL)
         // Informujte uživatele, že obrázek byl uložen
+        Toast.makeText(this, "Obrázek byl úspěšně uložen: $savedImageUri", Toast.LENGTH_LONG).show()
     }
 
     private fun shareImage() {
