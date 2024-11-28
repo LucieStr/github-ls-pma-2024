@@ -1,6 +1,5 @@
 package com.example.myapp014amynotehub
 
-import android.icu.text.CaseMap.Title
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -12,4 +11,3 @@ data class Note(
     val content: String,  // Obsah poznámky
     val categoryId: Int? = null  // Volitelný odkaz na kategorii
 )
-

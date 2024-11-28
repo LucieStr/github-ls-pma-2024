@@ -15,18 +15,13 @@
     <!-- FAB pro přidání nové poznámky -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_note"
-        android:layout_width="87dp"
-        android:layout_height="83dp"
-        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
         android:contentDescription="Přidat poznámku"
-        android:src="@drawable/ic_add"
+        android:src="@drawable/baseline_add_box_24"
         app:backgroundTint="@color/primaryColor"
         app:tint="@color/white" />
 </RelativeLayout>
