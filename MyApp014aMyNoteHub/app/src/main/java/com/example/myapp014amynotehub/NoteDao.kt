@@ -29,4 +29,7 @@ interface NoteDao {
     // Vymaže všechny záznamy z tabulky
     @Query("DELETE FROM note_table")
     suspend fun deleteAllNotes()
+
+    @Query("SELECT * FROM note_table WHERE categoryId = :categoryId")
+    fun getNotesByCategoryId(categoryId: Int): Flow<List<Note>>
 }
