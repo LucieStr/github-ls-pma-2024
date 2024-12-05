@@ -158,7 +158,7 @@ class MainActivity : AppCompatActivity() {
             loadNotes()  // Aktualizace seznamu poznámek
         }
     }
-    
+
     private fun editNote(note: Note) {
         val dialogView = layoutInflater.inflate(R.layout.dialog_add_note, null)
         val titleEditText = dialogView.findViewById<EditText>(R.id.editTextTitle)
