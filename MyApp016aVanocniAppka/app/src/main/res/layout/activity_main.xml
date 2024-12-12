@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FF0000"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/christmasImage"
+        android:layout_width="wrap_content"
+        android:layout_height="417dp"
+        android:contentDescription="Christmas Tree"
+        android:src="@drawable/christmas_tree" />
+
+
+    <Button
+        android:id="@+id/changeImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Změnit obrázek"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#B20000"/>
+
+    <EditText
+        android:id="@+id/christmasWishEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Napište své vánoční přání"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        />
+    <EditText
+        android:id="@+id/senderNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zadej tvoje jméno"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        />
+
+    <Button
+        android:id="@+id/sendWishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poslat Ježíškovi"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#B20000"/>
+</LinearLayout>
