@@ -3,13 +3,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#FF0000"
+    android:background="#D9ED3131"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/christmasImage"
         android:layout_width="wrap_content"
-        android:layout_height="417dp"
+        android:layout_height="332dp"
         android:contentDescription="Christmas Tree"
         android:src="@drawable/christmas_tree" />
 
@@ -48,4 +48,13 @@
         android:text="Poslat Ježíškovi"
         android:layout_marginTop="16dp"
         android:backgroundTint="#B20000"/>
+
+    <Button
+        android:id="@+id/viewWishesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zobrazit přání"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#B20000"/>
+
 </LinearLayout>

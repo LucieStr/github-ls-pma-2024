@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#D9ED3131">
+
+    <TextView
+        android:id="@+id/wishesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/clearWishesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vymazat všechna přání"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#B20000"/>
+</LinearLayout>
